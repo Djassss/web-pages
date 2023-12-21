@@ -1,0 +1,35 @@
+$main-color: rgb(52, 51, 51);
+$main-color3: rgb(108, 202, 202);
+
+.header{
+    background: $main-color;
+    display: flex;
+    justify-content: space-around;    
+    a{
+        margin: 0 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: transparent;
+        padding: 50px 120px;
+        color: #fff;
+        font-size: 20px;
+        &:hover{
+            background: $main-color3;
+            transition: 0.4s;
+            border-radius: 3px;
+            color: #000;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 677px) {
+    .header{
+        a{
+            padding: 27px;
+            font-size: 14px;
+        }
+    }
+    
+}

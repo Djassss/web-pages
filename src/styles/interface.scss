@@ -1,0 +1,64 @@
+$main-color: rgb(52, 51, 51);
+$main-color3: rgb(132, 226, 226);
+.nav{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    top: 70px;
+    width: 100%;
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        background: transparent;
+        color: #fff;
+        font-size: 20px;
+        padding:  15px 25px;
+        &:hover{
+            background: $main-color3;
+            transition: 0.4s;
+            border-radius: 3px;
+            color: #000;
+        }
+    }
+}
+.interface{
+    display: flex;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    video{
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+  
+  
+  
+
+
+
+@media screen and (max-width: 677px) {
+  
+    .nav{
+        a{
+            font-size: 14px;
+            padding:  10px 20px;
+        }
+    }
+}
+
+
+
+
+
