@@ -7,9 +7,6 @@ import { useAnimationFrame } from "framer-motion";
 import { useRef } from "react";
 
 
-
-
-
 import m4 from "../video/coding.mp4"
 
 
@@ -17,16 +14,15 @@ import m4 from "../video/coding.mp4"
 
 const Interface = () => {
 
-
   const ref = useSpring({
     from: {
-      opacity: 0
+      opacity: 0,
     },
     to: {
-      opacity: 1
+      opacity: 1,
     },
   });
-
+ 
 
 
   return (

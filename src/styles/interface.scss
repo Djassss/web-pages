@@ -14,6 +14,7 @@ $main-color3: rgb(132, 226, 226);
         color: #fff;
         font-size: 20px;
         padding:  15px 25px;
+        animation: contact 3s;
         &:hover{
             background: $main-color3;
             transition: 0.4s;
@@ -40,7 +41,11 @@ $main-color3: rgb(132, 226, 226);
 }
 
 
-
+@keyframes contact {
+    from {
+        x: 100px;
+    }
+}
 
   
   

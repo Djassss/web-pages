@@ -8,13 +8,20 @@ html,body{
     margin: 0;
     box-sizing: border-box;
     font-family: "Montserrat";
-    background: #999;
+    background: #111010;
     color: $text-color;
+    animation: ref 1s linear;
 }
 
 
 @media screen and (min-width: 888px) {
-    body{
+}
 
+@keyframes ref {
+    from{
+        opacity: 0.9;
+    }
+    to{
+        opacity: 1;
     }
 }
