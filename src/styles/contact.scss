@@ -1,0 +1,60 @@
+.contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    .logo{
+        font-size: 60px;
+        text-shadow: 10px 10px #727272;
+        color: #333;
+    }
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 100vh;
+    h5{
+        color: #585757;
+    }
+    .chat-bot{
+        max-width: 500px;
+        p{
+            word-spacing: 3px;
+            line-height: 22px;
+            font-size: 13px;
+        }
+        button{
+            padding:  10px 15px;
+            background: transparent;
+            border: 1px solid #000;
+            &:hover{
+                border-color: #9e9e9e;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.Receive-exclusive{
+    border-top: 1px solid #c7c7c7;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .sub{
+        padding: 10px 0;
+        width: 280px;
+        background: #000;
+        color: #fff;
+        border: none;
+        &:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+    }
+}

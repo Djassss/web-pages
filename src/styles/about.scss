@@ -1,24 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Source+Code+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Source+Code+Pro:wght@200&display=swap');
 $green:  #59f9a4b3;
 $orange: rgb(255, 119, 0);
-.about{
+$grey: #e2e0e0;
+
+.component-1{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
-  .logo-j{
-    font-size: 70px;
-    text-shadow: 10px 10px #68fbe5;
-    color: #f96f6f;
-    // animation: anim-logo 0.8s ease infinite alternate;
+  .resour{
+    position: absolute;
+    margin-left: 200px;
+    padding: 7px;
+    &:hover{
+      background: #ebe8e8;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 8px;
+      background: url('https://mailchimp.com/release/plums/cxp/images/global_nav/icon-caret-down.ca1e2922.1.svg') no-repeat 100%;
+      background-size: contain;
+      margin-left: 5px;
+      transition: 0.4s;
+    }
   }
-    .fabar{
+  .re{
 
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 8px;
+      rotate: 180deg;
+      background: url('https://mailchimp.com/release/plums/cxp/images/global_nav/icon-caret-down.ca1e2922.1.svg') no-repeat 100%;
+      transition: 0.4s;
+      background-size: contain;
+      margin-left: 5px;
+    }
+  }
+  .upper{
+    position: fixed;
+    width: 400px;
+    left: 50%;
+    margin-top: 50px;
+    transform: translateX(-50%);
+    height: 200px;
+    margin-bottom: 70px;
+    z-index: 999;
+    background: #000;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    button{
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 10px;
+      padding: 5px 10px ;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #464646;
+      border-radius: 2px;
+      cursor: pointer;
+      letter-spacing: 2px;
+      transition: all 0.4s;
+      &:hover{
+        border: 1px solid #a4a4a4;
+        transition: all 0.4s;
+      }
+    }
+    input{
+      margin: 15px 0;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      width: 200px;
+    }
+  }
+  .up{
+    display: none;
+  }
+  .activeRes{
+    &:hover{
+      background: #ebe8e8;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 8px;
+      rotate: 180deg;
+      background: url('https://mailchimp.com/release/plums/cxp/images/global_nav/icon-caret-down.ca1e2922.1.svg') no-repeat 100%;
+      background-size: contain;
+      margin-left: 5px;
+    } 
+  }
+  .socials{
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    .icn1{
+      margin: 0 10px;
+      animation: anim-socials1 1.5s 0.1s linear infinite ;
+      &:hover{
+        color: #fff;
+        cursor: pointer;
+        animation: step-end;
+      }
+    }
+    .icn2{
+      margin: 0 10px;
+      animation: anim-socials2 1.5s 0.2s linear infinite ;
+      &:hover{
+        color: #fff;
+        cursor: pointer;
+        animation: step-end;
+      }
+    }
+    .icn3{
+      margin: 0 10px;
+      animation: anim-socials3 1.5s 0.3s linear infinite ;
+
+      &:hover{
+        color: #fff;
+        cursor: pointer;
+        animation: step-end;
+      }
+    }
+    .icn4{
+      margin: 0 10px;
+      animation: anim-socials4 1.5s 0.4s linear infinite ;
+      &:hover{
+        color: #fff;
+        cursor: pointer;
+        animation: step-end;
+      }
+    }
+  }
+  .logo{
+    font-size: 70px;
+    text-shadow: 10px 10px #727272;
+    color: #333;
+  }
         .line-1{
-            border-bottom: 1px solid #999;
-            border-top: 1px solid #999;
+            border-bottom: 2px solid #000;
+            border-top: 2px solid #000;
             height: 15px;
-            width: 60px;
+            width: 70px;
             cursor: pointer;
             .border-inside{
               border-bottom: 1px solid #fff;
@@ -31,12 +171,14 @@ $orange: rgb(255, 119, 0);
      .btn{
       font-size: 25px;
      }
-      .sidebars{
+      .sidebar{
         background: #000;
-        opacity: 0.5;
+        opacity: 0.8;
+        color: #fff;
         display: flex;
         flex-direction: column;
         position: fixed;
+        z-index: 999;
         top: 0;
         right: 0;
         height: 100%;
@@ -48,7 +190,6 @@ $orange: rgb(255, 119, 0);
             border-bottom: 2px solid #fff;
             position: absolute;
             rotate: -45deg;
-            // animation: anim-xmark-2 1s linear infinite alternate;
             &:hover{
               cursor: pointer;
             }
@@ -59,7 +200,6 @@ $orange: rgb(255, 119, 0);
             margin-left: 220px;
             border-bottom: 2px solid #fff;
             rotate: 45deg;
-            // animation: anim-xmark 1s linear infinite alternate;
             &:hover{
               cursor: pointer;
             }
@@ -99,339 +239,99 @@ $orange: rgb(255, 119, 0);
           }
         }
       }
-    }
     
 }
   
-.user{
-    display: flex;
-    justify-content: center;
-    // background: #111010;
-  img{
-    width: 500px;
-    margin-left: 225px;
+.component-2{
+  display: flex;
+  justify-content: center;
+  background: #e9e7e7;
+  .carousel{
+    width: 1000px;
+    height: 500px;
   }
-  h1{
-    text-transform: uppercase;
-    font-size: 70px;
-    .close{
-      display: none;
-    }
-    .user-mail{
-      position: absolute;
-      top: 0;
-      margin-left: -200px;
-      margin-top: 240px;
-      .submit{
-        border-radius: 10px;
-        margin-left: 460px;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        background: #fff;
-        .user-message{
-          color: #333;
-          margin-top: 30px;
-        }
-        .user-info{
-          font-size: 13px;
-          color: #333;
-        }
-        .user-xmark{
-          margin-left: 200px;
-          font-size: 20px;
-          color: #333;
-          margin-top: 10px;
-          cursor: pointer;
-          &:hover{
-            animation: anim-xmark 1s linear infinite alternate;
-          }
-        }
-        input{
-          color: #333;
-          margin: 0 40px;
-          border: none;
-          outline: none;
-          border-bottom: 1px solid #000;
-          padding: 5px;
-          width: 200px;
-        }
-        .btn-submit{
-          color: #ddd;
-          height: 30px;
-          width: 100px;
-          border: none;
-          margin:  10px 0;
-          background: #333;
-          border-radius: 5px;
-          text-transform: capitalize;
-          letter-spacing: 3px;
-          &:hover{
-            cursor: pointer;
-            background: #000;
-          }
-        }
-      }
-    }
-    span{
-      color: rgb(255, 119, 0);
-    }
-    p{
-      font-size: 14px;
-      color: #8f8c8c;
-      .animate{
-        color:rgb(255, 119, 0);
-        animation: anim 5s linear infinite alternate;
-        display: flex;
-        width: 0;
-      }
-    }
-    .see-project{
-      height: 0;
-      button{
-        padding: 10px 30px;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 15px;
-        background: #333;
-        color: #68fbe5;
-        letter-spacing: 3px;
-        &:hover{
-          cursor: pointer;
-          color: #999;
-        }
-      }
-    }
-    .socials{
-      font-size: 20px;
-      margin-top: 100px;
-      margin-left: 300px;
-      // color: #68fbe5;
-      // animation: anim-socials 2s linear infinite;
-      .icn1{
-        color: #fff;
-        margin: 0 10px;
-        animation: anim-socials1 1.2s 0.1s linear infinite ;
-        &:hover{
-          color: #ddd;
-          cursor: pointer;
-          animation: step-end;
-        }
-      }
-      .icn2{
-        color: #a6f4e8;
-        margin: 0 10px;
-        animation: anim-socials2 1.2s 0.2s linear infinite ;
-        &:hover{
-          color: #ddd;
-          cursor: pointer;
-          animation: step-end;
-        }
-      }
-      .icn3{
-        color: #a6f4e8;
-        margin: 0 10px;
-        animation: anim-socials3 1.2s 0.3s linear infinite ;
-
-        &:hover{
-          color: #ddd;
-          cursor: pointer;
-          animation: step-end;
-        }
-      }
-      .icn4{
-        color: #a6f4e8;
-        margin: 0 10px;
-        animation: anim-socials4 1.2s 0.4s linear infinite ;
-        &:hover{
-          color: #ddd;
-          cursor: pointer;
-          animation: step-end;
-        }
-      }
-    }
-  }
-
 }
 
-.alert{
-  display: none;
-}
-.alert-close{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  margin-top: 20px;
+
+
+
+
+.component-3{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #000;
-  font-size: 20px;
-  padding: 30px;
-  text-transform: uppercase;
-  border: none;
-  .spinner{
-    animation: anim-spinner 1s linear infinite;
-  }
-}
-
-
-.section{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-family: 'Source Code Pro', monospace;
   height: 100vh;
-  margin-top: 50px;
-  border-top: 1px solid rgb(163, 163, 163);
-  .block-1{
-    margin-right: 400px;
-    h1{
-      text-transform: capitalize;
-      color: #fff;
-      background: rgb(28, 27, 27);
-      display: flex;
-      justify-content: center;
-      border-top-right-radius: 30px;
-      border-bottom-left-radius: 30px;
-      animation: section-anim-h1 3s linear infinite;
-    }
-  }  
-  .block-2{
-    p{
-        font-size: 11px;
-        max-width: 400px;
-        padding: 10px;
-        box-shadow:  15px 15px 15px #999;
-    }
+  font-family: 'Source Code Pro', monospace;
+  .design{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
   }
-  .skills{
-    position: absolute;
-    margin-top: 300px;
-    margin-right: 500px;
-    ul{
-      margin: 0;
-      padding: 10px 50px;
-      border-radius: 10px;
-      border-bottom: 1px solid #fff;
-      color: #ddd;
-      li{
-        list-style: none;
-        line-height: 30px;
-        &::after{
-          content: '';
-        }
+  .banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #34291f;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    div{
+      margin: 0 50px;
+      h1{
+        font-size: 40px;
       }
-    }
-  }
-  .personal{
-    position: absolute;
-    margin-top: 300px;
-    margin-left: 300px;
-    ul{
-      margin: 0;
-      padding: 10px 50px;
-      border-radius: 10px;
-      border-top: 1px solid #fff;
-      li{
-        list-style: none;
-        line-height: 30px;
-        letter-spacing: -1px;
-        .site{
-          color: $orange;
-        }
-        .country{
-          color: $orange;
-        }
-        .age{
-          color: $orange;
-        }
-        .lang{
-          color: $orange;
-        }
-        .city{
-          color: $orange;
-        }
-        .status{
-          color: $orange;
-        }
+      p{
+       font-family: "Montserrat";;
+       font-size: 13px;
       }
     }
   }
 }
-
 
 .footer{
-  font-size: 10px;
   display: flex;
   justify-content: center;
+  font-size: 10px;
   p{
     color: #999;
   }
 }
 
 
-@keyframes anim-xmark{
- to{
-  rotate: 180deg;
- }
-}
-@keyframes anim-xmark-2{
-  from{
-    rotate: 45deg;
-	}
-  to{
-    rotate: 0deg;
-  }
-}
-
 
 
 
 @keyframes anim-socials1{
   to{
-    color: #00fff2;
-    opacity: 0;
+    color: #000;
+    opacity: 0.2;
   }
 }
 @keyframes anim-socials2{
   to{
-    color: #00fff2;
-    opacity: 0;
+    color: #000;
+    opacity: 0.2;
 
   }
 }
 @keyframes anim-socials3{
   to{
-    color: #00fff2;
-    opacity: 0;
+    color: #000;
+    opacity: 0.2;
   }
 }
-
 @keyframes anim-socials4{
   to{
-    color: #00fff2;
-    opacity: 0;
+    color: #000;
+    opacity: 0.2;
   }
 }
 
 
-@keyframes anim {
-  to{
-    margin-left: 165px;
-  }
-}
 
 
-@keyframes anim-spinner{
-  from{
-  }
-  to{
-    rotate: 360deg;
-  }
-}

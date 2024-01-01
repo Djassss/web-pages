@@ -11,7 +11,6 @@ import "./styles/about.scss";
 import "./styles/interface.scss";
 import "./styles/contact.scss";
 
-
 const App = () => {
   return(
     <>
@@ -22,6 +21,7 @@ const App = () => {
           <Route path="/Contact" element={<Contact />}/>
           <Route path="/About" element={<About />} />
       </Routes>
+
     </Router>
     </>
   )
