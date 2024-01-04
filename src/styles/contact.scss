@@ -1,13 +1,28 @@
-.contact{
+.contact-header{
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border-bottom: 1px solid #000;
-    .logo{
-        font-size: 60px;
-        text-shadow: 10px 10px #727272;
-        color: #333;
+    .space{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    div{
+        display: flex;
+        margin-top: 60px;
+        input{
+            outline: none;
+        }
+        li{
+            list-style: none;
+            a{
+                margin: 0 10px;
+                text-decoration: none;
+                font-size: 15px;
+                color: #000;
+            }
+        }
     }
 }
 
@@ -37,6 +52,7 @@
                 cursor: pointer;
             }
         }
+      
     }
 }
 .Receive-exclusive{

@@ -1,0 +1,19 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #34291f;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    div{
+      margin: 0 50px;
+      h1{
+        font-size: 40px;
+      }
+      p{
+       font-family: "Montserrat";;
+       font-size: 13px;
+      }
+    }
+  }

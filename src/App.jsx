@@ -3,7 +3,6 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Header from "./Components/Header";
 import Interface from "./Components/Interface";
-import Sidebar from "./Components/Sidebar";
 
 import "./styles/app.scss";
 import "./styles/about.scss";

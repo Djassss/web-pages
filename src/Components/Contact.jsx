@@ -1,12 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import { useAnimate, stagger } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong, faBars, faBurger, faXmark, faMessage } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faTelegram, faTwitch, faTwitter, faYahoo, } from '@fortawesome/free-brands-svg-icons';
+import Button from './Button';
 import { Link } from 'react-router-dom';
-
+import messege from '../img/comment-black.png'
+import Chat from './Chat';
+import xmarkBlack from '../img/xmark.png'
+import { nav } from '../data.js'
 const socials = [faGithub, faTelegram, faYahoo, faTwitch,  faFacebook];
+
 const headerSocials = socials.map((social) => 
 <Link style={{
   color: '#000',
@@ -20,16 +24,32 @@ const headerSocials = socials.map((social) =>
 </Link>
 )
 
+const navBar = nav.map((n) => <li> <Link>{n}</Link> </li>)
 
+let logo = <h1 style={{
+  fontSize: '70px',
+  textShadow: '10px 10px #727272',
+  color: '#333',
+  marginLeft: '80px'
+}}>J</h1>
 
 const Contact = () => {
+  const [isChat, setIsChat] = useState(false);
+
+  function openChat() {
+    setIsChat(true)
+  }
+
   return (
     <>
-    <div className='contact'>
-        <h1 className='logo'>J</h1>
-      <li className='icons'>
-      </li>
+    <div className='contact-header'>
+      {logo}
+      <div className='space'>
+        <div>{navBar}</div>
+        <div><input type="text" /></div>
+      </div>
     </div>
+
     <div className='help'>
         <h3 style={{
           marginTop: '30px',
@@ -44,8 +64,8 @@ const Contact = () => {
         </h5>
 
         <div className='chat-bot'>
-          <FontAwesomeIcon icon={faMessage} style={{
-            color: '#999'
+          <img src={messege} style={{
+            width: '25px'
           }} />
           <p>
          <strong>
@@ -55,7 +75,22 @@ const Contact = () => {
           you can receive personalised help from one of our agents,
           Monday to Friday, 9 a.m. to 8 p.m. or Saturdays and Sundays from 9 a.m. to 5 p.m. (EST time)
           </p>
-          <button>Open chat</button>
+          <button onClick={openChat}>Open chat</button>
+
+          <Chat open={isChat}>
+            <img src={xmarkBlack} 
+            className='xmark'
+            onClick={() => setIsChat(false)}
+            />
+         <form action="">
+          <h4>Online chat</h4> 
+          {/* <label htmlFor="name">What is your name?</label> */}
+          <input type="text" id='name' placeholder='What is your name?'/>
+          <textarea name="text" id="" cols="30" rows="5" placeholder='1/150' maxLength={150}></textarea>
+          <button>Submit</button>
+         </form>
+
+          </Chat>
         </div>
 
         <p style={{
@@ -90,23 +125,22 @@ const Contact = () => {
             fontSize: '12px'}}
             >Privacy Policy </strong>
            and <strong style={{
-            fontSize: '12px'
-           }}
-           >Promotion conditions</strong>.
+             fontSize: '12px'
+            }}
+            >Promotion conditions</strong>.
            </p>
            <li style={{
-            listStyle: 'none',
-            fontSize: '22px',
-            marginTop: '50px',
-            marginBottom: '20px'
-           }}>
+             listStyle: 'none',
+             fontSize: '22px',
+             marginTop: '50px',
+             marginBottom: '20px'
+            }}>
              {headerSocials}
            </li>
            <p style={{
-            fontSize: '10px'
-           }}>© 2023 Jasur All rights reserved Privacy Policy and Cookies | Terms & Conditions | ADA</p>
+             fontSize: '10px'
+            }}>© 2023 Jasur All rights reserved Privacy Policy and Cookies | Terms & Conditions | ADA</p>
         </div>
-
     </>
   )
 }
