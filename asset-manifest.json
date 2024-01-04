@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/jas-cv/static/css/main.a9391857.css",
-    "main.js": "/jas-cv/static/js/main.87d3a1a8.js",
+    "main.css": "/jas-cv/static/css/main.caeec7d7.css",
+    "main.js": "/jas-cv/static/js/main.3eeb29d9.js",
     "static/media/coding.mp4": "/jas-cv/static/media/coding.17cf6613e577f40dfa5b.mp4",
     "static/media/3.jpg": "/jas-cv/static/media/3.6d78be99f712ff144a01.jpg",
     "static/media/1.jpg": "/jas-cv/static/media/1.ca838eda81b1774a939c.jpg",
-    "static/media/4.jpg": "/jas-cv/static/media/4.34e268b86d4c3aed26d4.jpg",
     "static/media/2.jpg": "/jas-cv/static/media/2.d3c743f1e016bad9a5e1.jpg",
     "index.html": "/jas-cv/index.html",
-    "static/media/under.1.svg": "/jas-cv/static/media/under.1.0f91dbd5593b8cb7220544d259780b15.svg",
-    "main.a9391857.css.map": "/jas-cv/static/css/main.a9391857.css.map",
-    "main.87d3a1a8.js.map": "/jas-cv/static/js/main.87d3a1a8.js.map"
+    "main.caeec7d7.css.map": "/jas-cv/static/css/main.caeec7d7.css.map",
+    "main.3eeb29d9.js.map": "/jas-cv/static/js/main.3eeb29d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9391857.css",
-    "static/js/main.87d3a1a8.js"
+    "static/css/main.caeec7d7.css",
+    "static/js/main.3eeb29d9.js"
   ]
 }
