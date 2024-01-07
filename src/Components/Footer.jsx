@@ -1,14 +1,25 @@
+import { Link } from "react-router-dom"
 
+import '../styles/footer.scss'
 
 export default function Footer () {
     return(
-    <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        fontSize: '10px',
-        color: '#999'
-    }}>
-        <p>© 2023. All rights reserved. Privacy Policy and Cookies | This page create by Jasur</p>
-    </div>  
+    <div className='footer-link'>
+        <li>
+            <Link>@2023 Jasur</Link>
+          </li>
+          
+          <li>
+            <Link>Terms of use</Link>
+          </li>
+          
+          <li>
+            <Link>Privacy policy</Link>
+          </li>
+          
+          <li>
+            <Link>jasurumarov.94@gmail.com</Link>
+          </li>
+    </div> 
     )
 }

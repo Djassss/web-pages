@@ -9,6 +9,7 @@ import "./styles/about.scss";
 // import "./styles/header.scss";
 import "./styles/interface.scss";
 import "./styles/contact.scss";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return(
@@ -20,7 +21,7 @@ const App = () => {
           <Route path="/Contact" element={<Contact />}/>
           <Route path="/About" element={<About />} />
       </Routes>
-
+    {/* <Footer /> */}
     </Router>
     </>
   )

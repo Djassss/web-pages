@@ -9,19 +9,10 @@ html,body{
     box-sizing: border-box;
     font-family: "Montserrat";
     color: $text-color;
-    animation: ref 1s linear;
     color: #000;
+    width: 100%;
+    height: 100%;
 }
 
 
-@media screen and (min-width: 888px) {
-}
 
-@keyframes ref {
-    from{
-        opacity: 0.9;
-    }
-    to{
-        opacity: 1;
-    }
-}

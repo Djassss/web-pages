@@ -2,121 +2,126 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faXmark } from '@fortawesome/free-solid-svg-icons';
 import {  faGithub, faTelegram, faTwitter, faYahoo } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect, useRef } from 'react';
+import m4 from "../video/coding.mp4"
 
 import xmarkWhite from '../img/xmark-white.png'
-import Slider from './Slider';
-import Footer from './Footer';
-import Section from './Section';
-import Button from './Button';
+import logoJ from '../img/LogoJBlack.png'
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const nav = [
-  <ul>
-    <li><Link to={'/contact'}>Contact</Link></li>
-    <li><Link to={'/'}>Back to Home</Link></li>
-    <li><HashLink to={'#personal'} smooth>About</HashLink></li>
-  </ul>
-]
-const socials = [
-  faTelegram,
-  faTwitter,
-  faYahoo,
-  faGithub
-]
-const sidebarSocials = socials.map((social) => <FontAwesomeIcon className='social' icon={social}/>) 
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const [open, setOpen] = useState(false);
-    const toggleOpen = () => {
-      setOpen(!open)
-    }
-  const [userLogin, setUserLogin] = useState('');
-  const [userPassword, setUserPassword] = useState('');
-
-  function login (event) {
-    setUserLogin(event.target.value);
-  }
-  function password (event) {
-    setUserPassword(event.target.value)
-  }
-
-  function log(){
-    if (userLogin === '') {
-      alert('Please Log In')
-    }else if(userPassword === '') {
-      alert('Please password')
-    }else(
-      alert('Thanks for subscribe')
-    )
-  }
-
-    return(
-      <>  
-    <div className='component-1'>
-          <h1 className='logo'>J</h1>
-          <nav
-          onClick={toggleOpen}
-          className={`resour ${open ? 're' : open}`} 
-          >Log In</nav>
-              <div className={`upper ${open ? open : 'up'}`}>
-                <FontAwesomeIcon
-                  icon={faXmark}
-                   style={{
-                    color: '#fff', 
-                    marginLeft: '300px',
-                    cursor:'pointer'
-                    }}
-                    onClick={toggleOpen}
-                    />
-                  <input type='text' placeholder='Email*' onChange={login}/>
-                 
-                  <input type='password' placeholder='Password*' onChange={password}/>
-                  <button onClick={log}>Log In</button>
-              </div>
-
-              <div className={`line-1 ${isOpen ? 'active' : 'line-1'}`} onClick={toggleSidebar}>
-              </div>
-
-{isOpen && <div className='sidebar'>
-                    <img src={xmarkWhite} onClick={toggleSidebar} 
-                    style={{
-                      width: '35px',
-                      marginTop: '30px',
-                      marginLeft: '240px',
-                      cursor: 'pointer'
-                    }}/>
-              {nav}
-              <div className="socials">
-                 {sidebarSocials}
-              </div>
-            </div>}
-    </div>
-    </>
-    )
-};
 
 const About = () => {
-  const [content, setContent] = useState('click me');
+  const nav = [
+    <ul>
+      <li><Link to={'/contact'}>Contact</Link></li>
+      <li><Link to={'/'}>Back to Home</Link></li>
+      <li><HashLink to={'#personal'} smooth>About</HashLink></li>
+    </ul>
+  ]
+  const socials = [
+    faTelegram,
+    faTwitter,
+    faYahoo,
+    faGithub
+  ]
+const sidebarSocials = socials.map((social) => <FontAwesomeIcon className='social' icon={social}/>) 
+const [isOpen, setIsOpen] = useState(false);
+const toggleSidebar = () => {
+  setIsOpen(!isOpen);
+};
 
-  function buttonClick(type) {
-    setContent(type)
-  }
+const [window, setWindow] = useState(false);
+function toggleWindow() {
+  setWindow(!window ? !isOpen : !window)
+}
+
   return (
   <>
-    <Sidebar />
-    <Slider />
-    <Section />   
-    <Footer /> 
-    {/* <Button onClick={() => buttonClick('easy')}>click1 </Button>
-    <Button onClick={() => buttonClick('program')}> Click 2</Button>
-    <p>{differences[content]}</p> */}
+    <div className='About'>
+        <header>
+          <img src={logoJ}  className='logo'/>
+          <ul>
+            <li>
+              <Link to={'/home'}>Home</Link>
+              <Link to={'/contact'}>Contact</Link>
+            </li>
+          </ul>
+
+          <button className={`login-btn ${window ? 'open' : 'login-btn'}`}
+           onClick={toggleWindow}>More</button>
+
+            <div className={`line ${isOpen ? 'active' : isOpen}`} onClick={toggleSidebar}>
+            </div>
+
+          {window &&  <div className='open-window'>
+              <ul>
+                <li>News</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+              </ul>
+              <img className='xmark-open-window' src={xmarkWhite} onClick={toggleWindow}
+               />
+            </div>}
+
+        </header>
+
+      <div className={`sidebar ${isOpen ? isOpen : 'close'}`} >
+          <img className='xmark' src={xmarkWhite} onClick={toggleSidebar}
+          />
+            {nav}
+          <div className="socials">
+                  {sidebarSocials}
+          </div>
+        </div>
+      <section>
+        <div>
+        <h1>Why?</h1>
+        <p>Working on big UI projects and websites, we understand how important it is to have a clear project structure and one-click access to every design screen. 
+
+     <br/> <p className='text-2'>That’s why we created Drafta, a place where designers can store project screens organized as site-tree navigation. Every screen can be shared with a client or a teammate simply sending a link.</p>
+        </p>
+        </div>
+        <div className='video-section'>
+          <video src={m4} muted autoPlay loop></video>
+        </div>
+        <div className='under-video'>
+          <li>
+            <Link>What's new</Link>
+            <Link>Github</Link>
+            <Link>Future plans</Link>
+          </li>
+        </div>
+        <div className='text'>
+          <h4>Upload designs. Create a project and upload your designs via web or directly from Sketch. </h4>
+          <h4>Organize. Arrange screens keeping states and resolutions together. You can add text pages too</h4>
+          <h4>Share. Simply copy URL to share your project designs with client or colleagues. Zero UI with precise retina scale and no distractions. </h4>
+          <h4>Collaborate. Discuss your designs with your project team, client or pretty much anyone in the world.</h4>
+        </div>
+      </section>
+    </div>
+
+    <div className='footer-about'>
+      <div className='footer-link'>
+                <li>
+                    <Link>@2023 Jasur</Link>
+                  </li>
+                  
+                  <li>
+                    <Link>Terms of use</Link>
+                  </li>
+                  
+                  <li>
+                    <Link>Privacy policy</Link>
+                  </li>
+                  
+                  <li>
+                    <Link>jasurumarov.94@gmail.com</Link>
+                  </li>
+        </div>
+    </div>
   </>
   )
 }
