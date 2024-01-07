@@ -1,14 +1,16 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightLong, faBars, faBurger, faXmark, faMessage } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faTelegram, faTwitch, faTwitter, faYahoo, } from '@fortawesome/free-brands-svg-icons';
-import Button from './Button';
 import { Link } from 'react-router-dom';
 import messege from '../img/comment-black.png'
 import Chat from './Chat';
 import xmarkBlack from '../img/xmark.png'
-import { nav } from '../data.js'
+
+// import { nav } from '../data.js'
+import logo from '../img/LogoYellow.png'
+import { HashLink } from 'react-router-hash-link';
+
 const socials = [faGithub, faTelegram, faYahoo, faTwitch,  faFacebook];
 
 const headerSocials = socials.map((social) => 
@@ -24,14 +26,9 @@ const headerSocials = socials.map((social) =>
 </Link>
 )
 
-const navBar = nav.map((n) => <li> <Link>{n}</Link> </li>)
+// const navBar = nav.map((n) => <li> <Link>{n}</Link> </li>)
 
-let logo = <h1 style={{
-  fontSize: '70px',
-  textShadow: '10px 10px #727272',
-  color: '#333',
-  marginLeft: '80px'
-}}>J</h1>
+
 
 const Contact = () => {
   const [isChat, setIsChat] = useState(false);
@@ -43,10 +40,17 @@ const Contact = () => {
   return (
     <>
     <div className='contact-header'>
-      {logo}
       <div className='space'>
-        <div>{navBar}</div>
-        <div><input type="text" /></div>
+      <img src={logo} />
+        {/* <div className='navbar'>{navBar}</div> */}
+        <div className='navbar'>
+          <li><Link to={'/'}>home</Link></li>
+          <li><Link to={'/about'}>about</Link></li>
+          <li><HashLink to={'#help'} smooth>help</HashLink></li>
+        </div>
+        <div>
+          <button className='Log-in'>Sign up</button>
+        </div>
       </div>
     </div>
 
@@ -75,14 +79,14 @@ const Contact = () => {
           you can receive personalised help from one of our agents,
           Monday to Friday, 9 a.m. to 8 p.m. or Saturdays and Sundays from 9 a.m. to 5 p.m. (EST time)
           </p>
-          <button onClick={openChat}>Open chat</button>
+          <button onClick={openChat} id='help'>Open chat</button>
 
           <Chat open={isChat}>
             <img src={xmarkBlack} 
             className='xmark'
             onClick={() => setIsChat(false)}
             />
-         <form action="">
+         <form action="" className='form'>
           <h4>Online chat</h4> 
           {/* <label htmlFor="name">What is your name?</label> */}
           <input type="text" id='name' placeholder='What is your name?'/>
@@ -93,12 +97,7 @@ const Contact = () => {
           </Chat>
         </div>
 
-        <p style={{
-          maxWidth: '500px',
-          lineHeight: '22px',
-          fontSize: '13px',
-          marginTop: '50px'
-        }}>
+        <p className='text'>
         You can also contact one of our agents by calling 
         1.866.6MNGMNG (1.866.666.4664)
         for free. Opening hours are Monday to Friday 
@@ -107,39 +106,18 @@ const Contact = () => {
         </p>
     </div>
         <div className='Receive-exclusive'>
-          <h5 style={{
-          }}>Receive exclusive promotions, private sales and news</h5>
-          <input type="email"  placeholder='Enter your e-mail' style={{
-            border: 'none',
-            outline: 'none',
-            background: 'transparent',
-            borderBottom: '1px solid #c7c7c7',
-            margin: '30px 0',
-            width: '275px'
-          }}/>
+          <h5>Receive exclusive promotions, private sales and news</h5>
+          <input type="email"  placeholder='Enter your e-mail'/>
           <button className='sub'>Subscribe</button>
-          <p style={{
-            fontSize: '10px',
-            marginTop: '30px'
-          }}>By subscribing, you agree to our <strong style={{
-            fontSize: '12px'}}
+          <p>By subscribing, you agree to our <strong
             >Privacy Policy </strong>
-           and <strong style={{
-             fontSize: '12px'
-            }}
+           and <strong
             >Promotion conditions</strong>.
            </p>
-           <li style={{
-             listStyle: 'none',
-             fontSize: '22px',
-             marginTop: '50px',
-             marginBottom: '20px'
-            }}>
+           <li>
              {headerSocials}
            </li>
-           <p style={{
-             fontSize: '10px'
-            }}>© 2023 Jasur All rights reserved Privacy Policy and Cookies | Terms & Conditions | ADA</p>
+           <p>© 2023 Jasur All rights reserved Privacy Policy and Cookies | Terms & Conditions | ADA</p>
         </div>
     </>
   )

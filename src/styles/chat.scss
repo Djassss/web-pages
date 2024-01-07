@@ -45,3 +45,53 @@ dialog{
         }
     }
 }
+
+@media screen and (max-width: 560px) {
+    dialog{
+        border-radius: 20px;
+        margin-top: 10px;
+        border: none;
+        width: 280px;
+        .xmark{
+            float: right;
+            width: 10px;
+            cursor: pointer;
+        }
+        form{
+            h4{
+                display: flex;
+                &::after{
+                    content: '';
+                    display: inline-block;
+                    background: url('../img/comment-black.png') no-repeat 100%;
+                    background-size: cover;
+                    margin-left: 5px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            // label{
+            //     margin-bottom: 20px;
+            //     font-size: 13px;
+            // }
+            input{
+                outline: none;
+                margin-bottom: 20px;
+                border: none;
+                border-bottom: 1px solid #000;
+                padding: 5px;
+                width: 180px;
+            }
+            textarea{
+                resize: none;
+                width: 180px;
+                height: 40px;
+                outline: none;
+                padding: 5px;
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
+}

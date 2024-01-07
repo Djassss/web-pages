@@ -145,6 +145,11 @@
     .footer-carousel{
         width: 400px;
         margin: 0 10px;
+        div{
+            img{
+                height: 500px;
+            }
+        }
     }
 }
 
@@ -169,7 +174,7 @@
         &:hover{
             cursor: pointer;
             background: #fff;
-            color: rgba(48, 234, 237, 0.995);
+            color: #111;
             transition: 0.4s;
             box-shadow: none;
         }
@@ -388,6 +393,11 @@
     .footer-carousel{
         width: 200px;
         margin: 0 10px;
+        div{
+            img{
+                height: 300px;
+            }
+        }
     }
 }
 
@@ -411,7 +421,7 @@
         &:hover{
             cursor: pointer;
             background: #fff;
-            color: rgba(48, 234, 237, 0.995);
+            color: #111;
             transition: 0.4s;
             box-shadow: none;
         }
@@ -425,11 +435,9 @@
         margin-top: 100px;
         padding: 50px;
         img{
-            width: 280px;
+            width: 320px;
         }
-        .logo-J{
-            width: 40px;
-        }
+      
         .try{
             border-radius: 20px;
             padding: 10px 0;
@@ -609,6 +617,11 @@
         .footer-carousel{
             width: 100px;
             margin: 0 10px;
+            div{
+                img{
+                    height: 150px;
+                }
+            }
         }
     }
     
@@ -628,13 +641,10 @@
             margin-top: 50px;
             padding: 5px;
             img{
-                width: 150px;
-            }
-            .logo-J{
-                width: 20px;
+                width: 200px;
             }
             .try{
-                border-radius: 2px;
+                border-radius: 10px;
                 padding: 5px 0;
                 width: 50px;
                 font-size: 7px;

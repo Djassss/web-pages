@@ -6,6 +6,7 @@ import {  faGithub, faTelegram, faTwitter, faYahoo } from '@fortawesome/free-bra
 import { useState, useEffect, useRef } from 'react';
 import m4 from "../video/coding.mp4"
 
+
 import xmarkWhite from '../img/xmark-white.png'
 import logoJ from '../img/LogoJBlack.png'
 
@@ -16,7 +17,7 @@ const About = () => {
     <ul>
       <li><Link to={'/contact'}>Contact</Link></li>
       <li><Link to={'/'}>Back to Home</Link></li>
-      <li><HashLink to={'#personal'} smooth>About</HashLink></li>
+      <li><HashLink to={'#personal'} smooth>Email*</HashLink></li>
     </ul>
   ]
   const socials = [
@@ -43,8 +44,8 @@ function toggleWindow() {
           <img src={logoJ}  className='logo'/>
           <ul>
             <li>
-              <Link to={'/home'}>Home</Link>
-              <Link to={'/contact'}>Contact</Link>
+              <Link className='Link' to={'/home'}>Home</Link>
+              <Link className='Link' to={'/contact'}>Contact</Link>
             </li>
           </ul>
 
@@ -56,11 +57,9 @@ function toggleWindow() {
 
           {window &&  <div className='open-window'>
               <ul>
-                <li>News</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <h1>All projects here.</h1>
+                <li><Link target='_blank' to={'https://djassss.github.io/list-card/'}><FontAwesomeIcon icon={faGithub}/></Link></li>
+                <li><Link  target='_blank' to={'https://djassss.github.io/Little-Game/'}><FontAwesomeIcon  icon={faGithub}/></Link></li>
               </ul>
               <img className='xmark-open-window' src={xmarkWhite} onClick={toggleWindow}
                />
@@ -118,7 +117,7 @@ function toggleWindow() {
                   </li>
                   
                   <li>
-                    <Link>jasurumarov.94@gmail.com</Link>
+                    <Link id='personal'>jasurumarov.94@gmail.com</Link>
                   </li>
         </div>
     </div>

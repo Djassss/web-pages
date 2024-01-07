@@ -1,4 +1,3 @@
-import { createPortal } from 'react-dom'
 import { useRef, useEffect } from 'react'
 import '../styles/chat.scss'
 

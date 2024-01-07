@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faGithub, faTelegram, faTwitter, faYahoo } from '@fortawesome/free-brands-svg-icons';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import logoWhite from '../img/LogoJWhite.png'
 import logoYellow from '../img/LogoYellow.png'
-import gift from '../img/gift.gif'
 
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -14,6 +12,18 @@ import F1 from '../img/1.jpg';
 import F2 from '../img/2.jpg';
 import F3 from '../img/3.jpg';
 import F4 from '../img/bannerF.png';
+import F5 from '../img/Без названия (1).jpg';
+import F6 from '../img/Без названия (3).jpg';
+import F7 from '../img/Без названия (2).jpg';
+import F9 from '../img/Без названия (21).jpg';
+import F10 from '../img/Без названия (24).jpg';
+import F11 from '../img/Без названия (26).jpg';
+import F12 from '../img/9137829330_1_1_1.jpg';
+import F13 from '../img/black.jpg';
+import F14 from '../img/blue.jpg';
+import F16 from '../img/2mango.webp';
+import F17 from '../img/1mango.webp';
+
 
 
 
@@ -99,14 +109,12 @@ const HeaderSection = () => {
                 showIndicators={false}
                 showArrows={false}
             >
-                <div>
-                    <img src={F1} />
-                </div>
+              
                 <div >
-                    <img src={F2} />
-                    </div>
+                    <img src={F16} />
+                  </div>
                 <div >
-                    <img src={F3} />
+                    <img src={F17} />
                 </div>
           </Carousel>
           <h3>
@@ -124,13 +132,13 @@ const HeaderSection = () => {
                   autoPlay
                 >
                   <div>
-                      <img src={F1} />
+                      <img src={F5} />
                   </div>
                   <div >
-                      <img src={F2} />
+                      <img src={F6} />
                       </div>
                   <div >
-                      <img src={F3} />
+                      <img src={F7} />
                   </div>
                 </Carousel>
                 <Carousel className='footer-carousel'
@@ -141,13 +149,13 @@ const HeaderSection = () => {
                   autoPlay
                 >
                   <div>
-                      <img src={F1} />
+                      <img src={F14} />
                   </div>
                   <div >
-                      <img src={F2} />
+                      <img src={F13} />
                       </div>
                   <div >
-                      <img src={F3} />
+                      <img src={F12} />
                   </div>
                 </Carousel>
                 <Carousel className='footer-carousel'
@@ -157,14 +165,14 @@ const HeaderSection = () => {
                   infiniteLoop
                   autoPlay
                 >
-                  <div>
-                      <img src={F1} />
+                 <div>
+                      <img src={F11} />
                   </div>
                   <div >
-                      <img src={F2} />
+                      <img src={F9} />
                       </div>
                   <div >
-                      <img src={F3} />
+                      <img src={F10} />
                   </div>
                 </Carousel>
               </div>
@@ -172,7 +180,6 @@ const HeaderSection = () => {
                 <button className='sign-free-btn'>Sign up free</button>
 
                 <div className='Builder'>
-                <img className='logo-J' src={logoYellow}/>
                   <img src={F4}  />
                   <button className='try'>Try it free</button>
                 </div>
