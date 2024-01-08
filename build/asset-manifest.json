@@ -1,11 +1,8 @@
 {
   "files": {
-    "main.css": "/web-pages/static/css/main.8a92cdc0.css",
-    "main.js": "/web-pages/static/js/main.6285bdfb.js",
+    "main.css": "/web-pages/static/css/main.fcb6551f.css",
+    "main.js": "/web-pages/static/js/main.36d3e077.js",
     "static/media/coding.mp4": "/web-pages/static/media/coding.17cf6613e577f40dfa5b.mp4",
-    "static/media/3.jpg": "/web-pages/static/media/3.6d78be99f712ff144a01.jpg",
-    "static/media/1.jpg": "/web-pages/static/media/1.ca838eda81b1774a939c.jpg",
-    "static/media/2.jpg": "/web-pages/static/media/2.d3c743f1e016bad9a5e1.jpg",
     "static/media/2mango.webp": "/web-pages/static/media/2mango.7efaa09c348535584b14.webp",
     "static/media/Без названия (24).jpg": "/web-pages/static/media/Без названия (24).128d53224ed4cc63aeae.jpg",
     "static/media/Без названия (1).jpg": "/web-pages/static/media/Без названия (1).f51e49f9bd441e71e42e.jpg",
@@ -20,11 +17,11 @@
     "static/media/Без названия (21).jpg": "/web-pages/static/media/Без названия (21).d279872fbb84a863ed9f.jpg",
     "static/media/LogoYellow.png": "/web-pages/static/media/LogoYellow.09a56a4a752fd12fc3a8.png",
     "index.html": "/web-pages/index.html",
-    "main.8a92cdc0.css.map": "/web-pages/static/css/main.8a92cdc0.css.map",
-    "main.6285bdfb.js.map": "/web-pages/static/js/main.6285bdfb.js.map"
+    "main.fcb6551f.css.map": "/web-pages/static/css/main.fcb6551f.css.map",
+    "main.36d3e077.js.map": "/web-pages/static/js/main.36d3e077.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a92cdc0.css",
-    "static/js/main.6285bdfb.js"
+    "static/css/main.fcb6551f.css",
+    "static/js/main.36d3e077.js"
   ]
 }
