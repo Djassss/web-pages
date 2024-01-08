@@ -8,9 +8,6 @@ import logoYellow from '../img/LogoYellow.png'
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import '../styles/headerSection.scss';
-import F1 from '../img/1.jpg';
-import F2 from '../img/2.jpg';
-import F3 from '../img/3.jpg';
 import F4 from '../img/bannerF.png';
 import F5 from '../img/Без названия (1).jpg';
 import F6 from '../img/Без названия (3).jpg';
@@ -37,9 +34,12 @@ const HeaderSection = () => {
   ]
 
   const headerSocials = socials.map((social) => <li><FontAwesomeIcon icon={social}/></li>)
-  return (
+
+
+  return (   
+
     <>
-    <div className='interFace'>
+    <div id='logo' className='interFace'>
     <div className='header-section'>
       <div className='leftSide'>
         <div></div>
@@ -72,7 +72,7 @@ const HeaderSection = () => {
 
       <div className='rightSide'>
         <div>
-            <img src={logoYellow}/>
+            <img  src={logoYellow}/>
           <ul>
            {headerSocials}
           </ul>
@@ -89,8 +89,8 @@ const HeaderSection = () => {
             color: '#999'
           }}>The perfect tool to store and  share web and <br /> interface design screens—in perfect order.</h3>
           <div className='sign-btn'>
-          <button>Sign up free</button>
-            <button className='solo-btn'>Sign in</button>
+ <Link to={'/register'}><button>Sign up free</button></Link>
+<Link to={'/login'}><button className='solo-btn'>Sign in</button></Link>
           </div>
         </div>
       </div>
@@ -177,11 +177,11 @@ const HeaderSection = () => {
                 </Carousel>
               </div>
               <div className='sign-free'>
-                <button className='sign-free-btn'>Sign up free</button>
+              <Link to={'/register'}> <button className='sign-free-btn'>Sign up free</button> </Link>
 
                 <div className='Builder'>
                   <img src={F4}  />
-                  <button className='try'>Try it free</button>
+                <HashLink smooth to={'#logo'}>  <button className='try'>Try it free</button> </HashLink>
                 </div>
               </div>
               <div className='footer-link'>

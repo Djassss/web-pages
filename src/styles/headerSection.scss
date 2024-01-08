@@ -36,6 +36,11 @@
                 letter-spacing: 1px;
             }
             .sign-btn{
+                a{
+                    padding: 0;
+                    margin: 0;
+                    color: #000;
+                }
                 .solo-btn{
                     margin-left: 50px;
                     background: transparent;
@@ -49,7 +54,7 @@
                     }
                 }
                 button{
-                    border: none;
+                    border: 2px solid rgba(48, 234, 237, 0.995);
                     border-radius: 20px;
                     padding: 12px 0;
                     width: 170px;
@@ -60,6 +65,7 @@
                     letter-spacing: 2px;
                     transition: 0.5s;
                     &:hover{
+                        border: 2px solid #fff;
                         box-shadow: none;
                         transition: 0.5s;
                         background: #fff;
@@ -147,7 +153,7 @@
         margin: 0 10px;
         div{
             img{
-                height: 500px;
+                height: 550px;
             }
         }
     }
@@ -293,18 +299,19 @@
                     }
                 }
                 button{
-                    border: none;
+                    border: 2px solid rgba(48, 234, 237, 0.995);
                     border-radius: 20px;
-                    padding: 10px 0;
+                    padding: 8px 0;
                     width: 100px;
                     background: rgba(48, 234, 237, 0.995);
                     box-shadow: 1px 1px 8px rgba(48, 234, 237, 0.995);
                     color: #222;
                     font-weight: bold;
-                    letter-spacing: 1px;
+                    letter-spacing: normal;
                     transition: 0.5s;
-                    font-size: 8px;
+                    font-size: 10px;
                     &:hover{
+                        border: 2px solid #fff;
                         box-shadow: none;
                         transition: 0.5s;
                         background: #fff;
@@ -417,7 +424,7 @@
         font-size: 14px;
         transition: 0.4s;
         box-shadow: 1px 1px 8px rgba(48, 234, 237, 0.995);
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         &:hover{
             cursor: pointer;
             background: #fff;
@@ -529,15 +536,15 @@
                         }
                     }
                     button{
-                        border: none;
+                        border: 2px solid rgba(48, 234, 237, 0.995);
                         border-radius: 20px;
-                        padding: 8px 0;
+                        padding: 6px 0;
                         width: 70px;
                         background: rgba(48, 234, 237, 0.995);
                         box-shadow: 1px 1px 8px rgba(48, 234, 237, 0.995);
                         color: #222;
                         font-weight: bold;
-                        letter-spacing: 1px;
+                        letter-spacing: normal;
                         transition: 0.5s;
                         font-size: 8px;
                     }

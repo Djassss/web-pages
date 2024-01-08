@@ -7,7 +7,6 @@ import messege from '../img/comment-black.png'
 import Chat from './Chat';
 import xmarkBlack from '../img/xmark.png'
 
-// import { nav } from '../data.js'
 import logo from '../img/LogoYellow.png'
 import { HashLink } from 'react-router-hash-link';
 
@@ -49,7 +48,8 @@ const Contact = () => {
           <li><HashLink to={'#help'} smooth>help</HashLink></li>
         </div>
         <div>
-          <button className='Log-in'>Sign up</button>
+          {/* <button className='Log-in'>Sign up</button> */}
+          <Link to={'/register'}><button className='Log-in'>Sign up</button></Link>
         </div>
       </div>
     </div>
