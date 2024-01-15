@@ -27,13 +27,25 @@ import F17 from '../img/1mango.webp';
 
 const HeaderSection = () => {
   const socials = [
-    faTelegram,
-    faTwitter,
-    faYahoo,
-    faGithub
+  {
+    id: 1,
+     name: faTelegram,
+  },
+  {
+    id: 2,
+   name: faTwitter,
+  },
+  {
+    id: 3,
+    name: faYahoo,
+  },
+  {
+    id: 4,
+     name:  faGithub
+  }
   ]
 
-  const headerSocials = socials.map((social) => <li><FontAwesomeIcon icon={social}/></li>)
+  const headerSocials = socials.map(({id, name}) => <li key={id}><FontAwesomeIcon icon={name}/></li>)
 
 
   return (   
